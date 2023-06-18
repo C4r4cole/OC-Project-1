@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border: plum solid 2px; */
+  border: plum solid 2px;
 }
 
 .main-container {
@@ -28,7 +28,7 @@ body {
   max-width: 1440px;
   padding: 0 50px;
   box-sizing: border-box;
-  /* border: solid 1px orange; */
+  border: solid 1px orange;
 }
 
 .section-title {
@@ -181,6 +181,10 @@ li a:hover {
   padding: 0 15px;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* filterbar */
 
 .filterbar {
@@ -202,6 +206,11 @@ li a:hover {
   border-radius: 30px;
   padding: 0 19px;
   height: 49px;
+  cursor: pointer;
+}
+
+.filter:hover {
+  background-color: #deebff;
 }
 
 .icon {
@@ -293,12 +302,10 @@ li a:hover {
 .hebergements-cards .card-title {
   margin-top: 10px;
   margin-bottom: 4px;
-  /* font-size: 0.8rem; */
 }
 
 .hebergements-cards .card-subtitle {
   margin: 0;
-  /* font-size: 0.7rem; */
 }
 
 .hebergements-cards .card-rating {
@@ -453,4 +460,66 @@ footer {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   /* ... */
+
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: plum solid 2px; */
+  }
+
+  .main-container {
+    padding: 0;
+    border: solid 1px orange;
+  }
+
+  .hebergements-and-populaires {
+    flex-direction: column-reverse;
+  }
+
+  .hebergements {
+    width: 100%;
+  }
+
+  .populaires {
+    width: 100%;
+    border-radius: 0 0;
+    margin-bottom: 50px;
+  }
+
+  .populaires-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .populaires-cards .card {
+    width: 100%;
+  }
+
+  .populaires-cards .card-title {
+    font-size: 14px;
+  }
+
+  .populaires-cards .card-subtitle {
+    font-size: 13px;
+  }
+
+  .hebergements-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hebergements-cards .card-v {
+    width: 100%;
+  }
+
+  .hebergements-cards .card-title {
+    font-size: 14px;
+  }
+
+  .hebergements-cards .card-subtitle {
+    font-size: 13px;
+  }
 }
