@@ -19,8 +19,8 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border: plum solid 2px;
+  align-items: center;
+  /* border: plum solid 2px; */
 }
 
 .main-container {
@@ -87,6 +87,8 @@ header {
   height: 79px;
   width: 121.08966064453125px;
   padding: 30px;
+  text-align: center;
+  /* border: red solid 1px; */
 }
 
 .logo img {
@@ -95,22 +97,25 @@ header {
 }
 
 nav {
-  /* border: #0065fc solid 3px; */
+  width: 30%;
+  /* border: #0065fc solid 1px; */
 }
 
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 328.6px;
   height: 100%;
   /* border: solid 1px green; */
   margin: 0px;
 }
 
 li a {
+  /* display: inline-block; */
   text-decoration: none;
   color: black;
 }
@@ -118,7 +123,8 @@ li a {
 li a:hover {
   color: #0065fc;
   border-top: solid 3px #0065fc;
-  padding-top: 36px; /* bidouille ? */
+  padding-top: 36px;
+  /* bidouille ? */
 }
 
 /****** info group ******/
@@ -127,7 +133,6 @@ li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 281px;
   /* border: red solid 2px; */
 }
 
@@ -162,7 +167,7 @@ li a:hover {
 
 .searchbar input {
   border: var(--main-bg-color) solid 1px;
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -175,7 +180,7 @@ li a:hover {
   background-color: #0065fc;
   color: white;
   border: #0065fc;
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 700;
   border-radius: 0 15px 15px 0;
   padding: 0 15px;
@@ -190,8 +195,7 @@ button {
 .filterbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 758px;
+  justify-content: left;
 }
 
 .filterbar p {
@@ -311,6 +315,7 @@ button {
 .hebergements-cards .card-rating {
   margin-bottom: 5px;
 }
+
 /****** Populaires ***********/
 .populaires {
   width: 32%;
@@ -459,8 +464,19 @@ footer {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-  /* ... */
+  /* Header */
 
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  /* Body */
   body {
     margin: 0;
     padding: 0;
@@ -470,7 +486,39 @@ footer {
 
   .main-container {
     padding: 0;
-    border: solid 1px orange;
+    /* border: solid 1px orange; */
+  }
+
+  .filter {
+    margin: 5px;
+  }
+
+  .filterbar {
+    display: grid;
+    grid-template-areas:
+      "a a a a"
+      "b b c c"
+      "d d e e";
+  }
+
+  .filter-zero {
+    grid-area: a;
+  }
+
+  .filter-one {
+    grid-area: b;
+  }
+
+  .filter-two {
+    grid-area: c;
+  }
+
+  .filter-three {
+    grid-area: d;
+  }
+
+  .filter-four {
+    grid-area: e;
   }
 
   .hebergements-and-populaires {
