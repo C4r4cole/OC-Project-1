@@ -28,7 +28,7 @@ body {
   max-width: 1440px;
   padding: 0 50px;
   box-sizing: border-box;
-  border: solid 1px orange;
+  /* border: solid 1px orange; */
 }
 
 .section-title {
@@ -55,6 +55,18 @@ body {
 }
 
 .card-v img {
+  object-fit: cover;
+}
+
+/* card-v et card semblent avoir les même attributs css... Ai-je répété du code inutilement ? alors qu'il aurait suffit de nommer toutes les card de la même manière ? */
+
+.card-x {
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card-x img {
   object-fit: cover;
 }
 
@@ -153,6 +165,7 @@ li a:hover {
 
 .searchbar {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .group-15 {
@@ -199,7 +212,7 @@ button {
 }
 
 .filterbar p {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -209,6 +222,7 @@ button {
   border: var(--main-bg-color) solid 2px;
   border-radius: 30px;
   padding: 0 19px;
+  margin: 0 10px;
   height: 49px;
   cursor: pointer;
 }
@@ -375,7 +389,7 @@ button {
   align-items: center;
 }
 
-.activities-cards .card {
+.activities-cards .card-x {
   display: flex;
   flex-direction: column;
   margin-top: 33px;
@@ -489,8 +503,17 @@ footer {
     /* border: solid 1px orange; */
   }
 
+  .info-group {
+    margin: 12px;
+    height: 500px;
+  }
+
+  .searchbar {
+    margin-bottom: 0;
+  }
+
   .filter {
-    margin: 5px;
+    margin: 0 10px 10px 0;
   }
 
   .filterbar {
@@ -523,16 +546,19 @@ footer {
 
   .hebergements-and-populaires {
     flex-direction: column-reverse;
+    margin: 0;
   }
 
-  .hebergements {
-    width: 100%;
+  .hebergements-and-populaires section {
+    border-radius: 0;
   }
+
+  /* *** Populaire *** */
 
   .populaires {
     width: 100%;
-    border-radius: 0 0;
-    margin-bottom: 50px;
+    border-radius: 0;
+    margin: 0;
   }
 
   .populaires-cards {
@@ -553,6 +579,24 @@ footer {
     font-size: 13px;
   }
 
+  /* *** Hebergements *** */
+
+  #hebergements {
+    background-color: white;
+  }
+
+  .hebergements {
+    width: 100%;
+  }
+
+  .top {
+    flex-direction: column;
+  }
+
+  .bottom {
+    flex-direction: column;
+  }
+
   .hebergements-cards {
     display: flex;
     flex-direction: column;
@@ -569,5 +613,36 @@ footer {
 
   .hebergements-cards .card-subtitle {
     font-size: 13px;
+  }
+
+  /* *** Activities *** */
+
+  .activities {
+    padding: 0 30px 30px 30px;
+  }
+
+  .activities-cards {
+    flex-direction: column;
+    height: 1200px;
+  }
+
+  .activities-cards .card-x {
+    width: 100%;
+    height: 20%;
+  }
+
+  .activities-cards img {
+    height: 85%;
+  }
+
+  .activities-cards .card-content {
+    height: 15%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 500px;
   }
 }
