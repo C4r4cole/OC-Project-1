@@ -20,15 +20,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: plum solid 2px;
+  /* border: plum solid 2px; */
 }
 
 .main-container {
   width: 100%;
   max-width: 1440px;
-  /* padding: 0 50px; */
+  min-width: 320px;
   box-sizing: border-box;
-  border: solid 1px orange;
+  /* border: solid 1px orange; */
 }
 
 .section-title {
@@ -58,7 +58,10 @@ body {
   object-fit: cover;
 }
 
-/* card-v et card semblent avoir les même attributs css... Ai-je répété du code inutilement ? alors qu'il aurait suffit de nommer toutes les card de la même manière ? */
+a {
+  text-decoration: none;
+  color: black;
+}
 
 .card-x {
   background-color: white;
@@ -92,7 +95,7 @@ header {
   max-width: 1440px;
   box-sizing: border-box;
   margin-bottom: 30px;
-  border: solid 1px blue;
+  /* border: solid 1px blue; */
 }
 
 .logo {
@@ -210,6 +213,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: left;
+}
+
+.filterbar-filters {
+  display: flex;
 }
 
 .filterbar p {
@@ -481,6 +488,20 @@ footer {
   .populaires-cards .card-subtitle {
     font-size: 13px;
   }
+
+  .filterbar {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .filter {
+    margin: 0 7px;
+  }
+
+  .filter-one {
+    margin-left: 0;
+  }
 }
 
 /* Small devices (phones, less than 768px) */
@@ -491,6 +512,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 120px;
   }
 
   nav {
@@ -510,20 +532,37 @@ footer {
     /* border: solid 1px orange; */
   }
 
+  /**** info group ****/
+
   .info-group {
     margin: 12px;
     height: 500px;
+    padding: 10px;
   }
 
   .searchbar {
     margin-bottom: 0;
   }
 
-  .filter {
-    margin: 0 10px 10px 0;
+  .searchbar input {
+    font-size: 0.9rem;
   }
 
-  .filterbar {
+  .search {
+    font-size: 0.9rem;
+    padding: 0 12px;
+  }
+
+  .filter {
+    margin: 0 6px 6px 0;
+    padding: 0 10px;
+  }
+
+  .filter p {
+    font-size: 0.9rem;
+  }
+
+  .filterbar-filters {
     display: grid;
     grid-template-areas:
       "a a a a"
@@ -554,6 +593,7 @@ footer {
   .hebergements-and-populaires {
     flex-direction: column-reverse;
     margin: 0;
+    padding: 0;
   }
 
   .hebergements-and-populaires section {
