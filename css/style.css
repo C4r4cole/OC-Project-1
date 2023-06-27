@@ -388,7 +388,7 @@ button {
   flex-direction: column;
   margin-top: 33px;
   width: 23%;
-  height: 439px;
+  height: 450px;
 }
 
 .activities-cards .card-x a {
@@ -470,13 +470,16 @@ footer {
   }
 
   .populaires-cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .populaires-cards a {
+    margin: 15px;
   }
 
   .populaires-cards .card {
-    width: 30%;
+    width: 100%;
   }
 
   .populaires-cards .card-title {
@@ -485,6 +488,10 @@ footer {
 
   .populaires-cards .card-subtitle {
     font-size: 13px;
+  }
+
+  .activities-cards .card-x {
+    height: 600px;
   }
 
   .filterbar {
@@ -560,6 +567,15 @@ footer {
 
   .searchbar input {
     font-size: 0.9rem;
+    width: 70%;
+  }
+
+  .searchbar button {
+    width: 15%;
+  }
+
+  .group-15 {
+    width: 15%;
   }
 
   .search {
@@ -577,7 +593,8 @@ footer {
 
   .filter {
     margin: 0 6px 6px 0;
-    padding: 0 10px;
+    display: flex;
+    justify-content: center;
   }
 
   .filter p {
@@ -586,6 +603,7 @@ footer {
 
   .filterbar-filters {
     display: grid;
+    width: 100%;
     grid-template-areas:
       "a a a a"
       "b b c c"
